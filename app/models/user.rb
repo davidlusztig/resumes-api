@@ -4,4 +4,6 @@ class User < ApplicationRecord
   has_many :resumes
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  acts_as_token_authenticatable
 end

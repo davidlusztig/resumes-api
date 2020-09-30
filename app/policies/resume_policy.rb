@@ -8,5 +8,18 @@ class ResumePolicy < ApplicationPolicy
   def show?
     true
   end
+
+def destroy?
+  update?
+end
+
+  def update?
+    record.user == user
   end
+
+  def create?
+    !user.nil?
+  end
+
+end
 
