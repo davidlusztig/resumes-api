@@ -4,4 +4,9 @@ class ResumePolicy < ApplicationPolicy
       scope.all
     end
   end
-end
+
+  def show?
+    true
+  end
+  end
+
